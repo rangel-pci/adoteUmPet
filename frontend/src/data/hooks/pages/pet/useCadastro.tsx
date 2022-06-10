@@ -54,7 +54,7 @@ export function useCadastro(cookieTheme: 'dark'|'light'){
 
     yup.setLocale(pt);
     const registerSchema = yup.object().shape({
-        Nome: yup.string().required().max(50),
+        Nome: yup.string().required().min(3).max(50),
         'História': yup.string().required(),
         'Foto': yup.string().required(),
     });

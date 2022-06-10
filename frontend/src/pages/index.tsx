@@ -1,21 +1,17 @@
 import type { NextPage } from 'next'
 import Title from '../ui/components/Title/Title';
 import List from '../ui/components/List/List';
-import Header from '../ui/components/Header/Header';
+import HeaderAdmin from '../ui/components/HeaderAdmin/HeaderAdmin';
 import { parseCookies } from 'nookies';
 import { GetServerSideProps } from 'next';
 import { CssBaseline, ThemeProvider, Dialog, TextField, DialogActions, Button, CircularProgress, Backdrop } from '@mui/material';
 import { useIndex } from '../data/hooks/pages/useIndex';
-
+import Head from 'next/head';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { themeProps } from '../data/@types/Theme';
 
-
-interface indexProps {
-  app_theme_mode: 'light'|'dark';
-}
-
-const Home: NextPage<indexProps> = (props) => {
+const Home: NextPage<themeProps> = (props) => {
 
   const {
     themeMode,
@@ -34,8 +30,12 @@ const Home: NextPage<indexProps> = (props) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>Adote um Pet</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <CssBaseline>
-        <Header
+        <HeaderAdmin
           onChange={changeThemeMode}
           themeMode={themeMode}
         />

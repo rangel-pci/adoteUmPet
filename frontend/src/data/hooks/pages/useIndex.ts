@@ -80,8 +80,6 @@ export function useIndex(cookieTheme: 'dark'|'light'){
             err.errors.map((msg: string) => {
                 toast.error(msg);
             })
-
-            
         });
     }
 

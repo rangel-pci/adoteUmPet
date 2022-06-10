@@ -31,7 +31,7 @@ const paletteTheme = (mode: PaletteMode) => ({
           },
     },
     shape: {
-        borderRadius: '3px',
+        borderRadius: 3,
     },
     components: {
         MuiButton: {

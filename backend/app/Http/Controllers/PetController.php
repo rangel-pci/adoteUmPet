@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PetRequest;
+use App\Http\Resources\PetCollection;
 use App\Models\Pet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -13,7 +14,7 @@ class PetController extends Controller
 {
     public function index()
     {
-        $pets = Pet::orderBy('id', 'desc')->get();
+        $pets = new PetCollection(Pet::orderBy('id', 'desc')->get());
         return response()->json($pets);
     }
 
@@ -35,9 +36,10 @@ class PetController extends Controller
         $path = storage_path('app/public/').$imgName;
         $img->save($path, 90);
 
-        $data['image'] = asset('storage/'.$imgName);
+        $data['image'] = $imgName;
 
         $pet = Pet::create($data);
+        if($pet){$pet->image = asset('storage/'.$pet->image);}
         return $pet ? response()->json($pet,201) : response()->json(null, 500);
     }
 }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AdoptionRequest;
 use App\Http\Resources\AdoptionCollection;
 use App\Models\Adopotion;
-use App\Rules\AdoptionPetUnique;
+// use App\Rules\AdoptionPetUnique;
 use Error;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;

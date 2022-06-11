@@ -1,6 +1,6 @@
 import { Link, Tooltip, IconButton, MenuItem, Menu, Backdrop } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import NextLink  from 'next/Link';
+import NextLink  from 'next/link';
 import { useState } from "react";
 
 export default function MobileMenuButton(){

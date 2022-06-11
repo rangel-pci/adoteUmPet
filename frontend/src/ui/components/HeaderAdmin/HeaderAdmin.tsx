@@ -3,7 +3,7 @@ import MobileMenuButton from "./MobileMenuButton"
 import Brightness7RoundedIcon from '@mui/icons-material/Brightness7Rounded';
 import Brightness4RoundedIcon from '@mui/icons-material/Brightness4Rounded';
 import { FormGroup, Switch, Link } from '@mui/material';
-import NextLink  from 'next/Link';
+import NextLink  from 'next/link';
 import { useRouter } from 'next/router';
 
 interface propsType{

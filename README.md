@@ -2,7 +2,7 @@
 
 <h2>About</h2>
 
-Aplication developed in Next.js consuming a Laravel API.
+Application developed in Next.js consuming a Laravel API.
 Improve the living condition of homeless animals with a small amount, register/adopt new pets and check the adopted pets report.
 
 
